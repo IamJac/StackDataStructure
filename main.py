@@ -1,5 +1,4 @@
 import stackclass as st
-import os
 from time import sleep
 obj=st.Stack()
 option=None
