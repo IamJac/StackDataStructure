@@ -37,10 +37,11 @@ class Stack:
     def display(self):
         if len(self.data)==0:
             print("The stack is empty")
+            return
         else:
             num=-1
             print("Stack elements:-")
             while num>=-(len(self.data)):
-                print(self.data[num],end=",")
+                print(self.data[num],end=" ")
                 num-=1
-        return
+            return
