@@ -1,4 +1,6 @@
 import stackclass as st
+import subprocess
+import os
 from time import sleep
 obj=st.Stack()
 option=None
@@ -16,35 +18,38 @@ while option!=0:
     print("3.Count of elements in the stack")
     print("4.Display stack elements")
     print("5.Check element stored in a certain position")
-    option=int(input("Your option"))
+    option=int(input("Your option "))
     if option==1:
-        value=int(input("Enter an integral value to be stored in the stack"))
+        value=int(input("Enter an integral value to be stored in the stack "))
         obj.push(value)
-        sleep(1)
-        print()
+        sleep(2)
+        subprocess.call('cls',shell=True)
     elif option==2:
-        num_delete=int(input("Input element to be deleted"))
+        num_delete=int(input("Input element to be deleted "))
         element_index=obj.pop(num_delete)
         if element_index!=-1:
             print(F"The value {num_delete} which was at position {element_index} of the stack has been removed successfully")
         else:
             print("Stack underflow-The stack is empty")
-        sleep(1)
-        print()
+        sleep(2)
+        subprocess.call('cls',shell=True)
     elif option==3:
         print(f'The stack has {obj.count()} elements')
-        sleep(1)
-        print()
+        sleep(2)
+        subprocess.call('cls',shell=True)
     elif option==4:
-        obj.display()
-        sleep(1)
-        print()
+        print(obj.display())
+        sleep(2)
+        subprocess.call('cls',shell=True)
     elif option==5:
-        index=int(input("Input stack position of the element to be checked"))
+        index=int(input("Input stack position of the element to be checked "))
         obj.peek(index)
-        sleep(1)
-        print()
+        sleep(2)
+        subprocess.call('cls',shell=True)
+    elif option==0:
+        break
     else:
         print(F"{option} is an invalid option.Input a proper one")
-        sleep(1)
+        sleep(2)
+        subprocess.call('cls',shell=True)
         print()
